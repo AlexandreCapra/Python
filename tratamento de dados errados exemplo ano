@@ -1,0 +1,6 @@
+numero = input("Digite um número: ")
+
+while not numero.isnumeric() or len(numero) != 4:
+    numero = input("\033[31mErro\033[m: Tente novamente.\nDigite um número: ")
+numero = int(numero)
+print(numero)
