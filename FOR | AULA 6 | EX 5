@@ -1,0 +1,11 @@
+"""
+[Exercício 5] Escreva um programa que leia 6 números inteiros do usuário e mostre a soma
+apenas daqueles que forem pares, Se o valor for ímpar, desconsidere-o.
+"""
+total = 0
+for numeros in range(1, 7):
+    numero = int(input("Digite um número: "))
+    if numero % 2 == 0:
+        total = total + numero
+        print(numero)
+print(f"O total da soma dos números pares é = {total}
