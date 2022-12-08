@@ -1,0 +1,17 @@
+"""[Exercício 8] Escreva um programa que leia uma frase qualquer e diga se ela é um PALÍNDROMO, desconsiderando os espaços e a acentuação.
+Ex:
+“APOS A SOPA”
+“A SACADA DA CASA”
+“A TORRE DA DERROTA”
+“O LOBO AMA O BOLO”
+“ANOTARAM A DATA DA MARATONA”
+"""
+
+frase = str(input("Digite uma frase qualquer, para ver se é palíndromo: ")).strip().upper()
+juntos = "".join(frase.split())
+inverso = juntos[::-1]
+
+if juntos == inverso:
+    print(f"{frase} é palindromo")
+else:
+    print(f"{frase} não é palindromo")
