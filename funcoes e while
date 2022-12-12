@@ -9,7 +9,7 @@ def verificaNome():
     nome = input("Digite um nome: ")
     while not nome.isalpha():
         nome = input("Erro: Tente novamente. Digite um nome: ")
-        nome = str(nome).strip().title()
+    nome = str(nome).strip().title()
     while len(nome) < 4:
         nome = input("Errado, deve conter pelo menos 4 letras. Digite um nome: ")
 
@@ -17,7 +17,7 @@ def verificaIdade():
     idade = input("Digite sua idade em anos: ")
     while not idade.isnumeric():
         idade = input("Erro: Tente novamente. Digite uma idade: ")
-        idade = int(idade)
+    idade = int(idade)
     while idade not in range(0, 151):
         idade = input("Erro, digite uma idade válida, entre 0 e 150 anos. Digite sua idade em anos: ")
 
@@ -25,12 +25,11 @@ def verificaSalario():
     salario = input("Digite um salário: ")
     while not salario.isnumeric():
         salario = input("Erro: Tente novamente. Digite um salário: ")
-        salario = float(salario)
+    salario = float(salario)
     while salario < 0:
         salario = input("Erro, valor tem que ser acima de 0. Digite um salário: ")
 
 def verificaSexo():
-    sexo = input("Digite seu sexo [M/F]")
     sexo = str(input("Digite seu sexo [M/F]")).upper().strip()[0]
     while sexo not in 'MF':
         sexo = str(input("Erro, Digite seu sexo [M/F]")).upper().strip()[0]
