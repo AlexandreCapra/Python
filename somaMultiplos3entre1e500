@@ -1,0 +1,6 @@
+soma = 0
+for numero in range(1, 501):
+    if(numero % 3 == 0):
+        print(f"{numero}")
+        soma += numero
+print(f"O resultado da soma dos números divisiveis por 3 entre 1 e 500 é de: {soma}")
