@@ -1,0 +1,12 @@
+import time
+def anoNovo():
+    print("="*30)
+    print(f"{f'Feliz ano novo':^30}")
+    print("=" * 30)
+print("="*30)
+for n in range(10, -1, -1):
+    time.sleep(1)
+    print(f"{f'{n}':^30}")
+anoNovo()
+
+
