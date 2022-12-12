@@ -1,0 +1,9 @@
+tabuada = int(input("Digite um número, para saber sua tuabuada: "))
+def cabecalho():
+    print("=" * 30)
+    print(f"{f'tabuada do {tabuada}':^30}")
+    print("=" * 30)
+cabecalho()
+for numero in range(1, 11):
+    resultado = tabuada * numero
+    print(f"a tabuada do {tabuada} é : {tabuada} * {numero} = {resultado}")
