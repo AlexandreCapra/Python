@@ -37,11 +37,24 @@ def verificaSexo():
     while sexo not in 'MF':
         sexo = input("Erro, Digite seu sexo [M/F]").upper().strip()[0]
 
-verificaSexo()
+
+def siglaEC():
+    print("="*35)
+    print("""
+    S = SOLTEIRO(A)
+    C = CASADO(A)
+    V = VIUVO(A)
+    D = DIVORCIADO(A)""")
 
 def verificaEstadoCivil():
-    estadoCivil = str(input("Digite seu estado civil [S/C/V/D]")).upper().strip()[0]
+    siglaEC()
+    estadoCivil = input("Digite seu estado civil [S/C/V/D]")
+    while not estadoCivil.isalpha():
+        siglaEC()
+        estadoCivil = input("ERRRO, TENTE NOVAMENTE. \nDigite seu estado civil [S/C/V/D]").upper().strip()[0]
+    estadoCivil = str(estadoCivil).upper().strip()[0]
     while estadoCivil not in 'SCVD':
+        siglaEC()
         estadoCivil = str(input("Erro, Digite seu estado civil [S/C/V/D]")).upper().strip()[0]
 
 
