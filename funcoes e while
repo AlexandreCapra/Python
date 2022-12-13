@@ -65,5 +65,5 @@ while True:
     verificaSalario()
     verificaSexo()
     verificaEstadoCivil()
-  break
+    break
 print("Fim")
