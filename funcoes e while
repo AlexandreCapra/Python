@@ -30,9 +30,14 @@ def verificaSalario():
         salario = input("Erro, valor tem que ser acima de 0. Digite um salário: ")
 
 def verificaSexo():
-    sexo = str(input("Digite seu sexo [M/F]")).upper().strip()[0]
+    sexo = input("Digite seu sexo [M/F]? ")
+    while not sexo.isalpha():
+        sexo = input("Erro tente novamente. Digite seu sexo [M/F]? ").upper().strip()[0]
+    sexo = str(sexo).upper().strip()[0]
     while sexo not in 'MF':
-        sexo = str(input("Erro, Digite seu sexo [M/F]")).upper().strip()[0]
+        sexo = input("Erro, Digite seu sexo [M/F]").upper().strip()[0]
+
+verificaSexo()
 
 def verificaEstadoCivil():
     estadoCivil = str(input("Digite seu estado civil [S/C/V/D]")).upper().strip()[0]
