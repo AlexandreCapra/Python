@@ -8,7 +8,7 @@ import re
 
 
 #Cria uma lista de palavras, das quais vai selecionar uma delas aleatoriamente, para ela fazer parte do jogo
-
+print("Meu professor de Python é maravilhoso! <3")
 palavras = ["cachorro", "gato", "passaro", "banana", "carro", "concreto", "godzilla", "celular"]
 tentativas = 0 #numero de tentativas
 print("JOGO DA FORCA\n Você só pode errar 6 vezes, boa sorte")
