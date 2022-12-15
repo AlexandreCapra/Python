@@ -1,0 +1,20 @@
+def linha():
+    print("="*30)
+    if tabuada == 0:
+        print(f"{f'Você digitou {tabuada}':^30}")
+        print("="*30)
+    else:
+        print(f"{f'tabuada do {tabuada}':^30}")
+        print("=" * 30)
+
+while True:
+    tabuada = int(input("Digite qual tabuada deseja. Se desejar sair digite 0: "))
+    linha()
+    if tabuada == 0:
+        print(f"{f'Você escolheu sair!':^30}")
+        print("="*30)
+        break
+    for tabuadas in range(0, 11):
+        resultado = tabuada * tabuadas
+        print(f"{f'{tabuada} * {tabuadas} = {resultado}':^30} ")
+    print("="*30)
