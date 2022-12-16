@@ -1,0 +1,55 @@
+"""[Exercício 3] Escreva um programa que jogue par ou impar com o computador.
+O jogo só será interrompido quando o jogador PERDER,
+mostrando o total de vitórias consecutivas que ele conquistou no final do jogo"""
+import random
+
+
+def parOuImpar():
+    print("="*50)
+    numero = int(input(f"Par ou Impar ? \n[1] = Par; \n[2] = Impar; \n[0] = Sair.\n => Opção: "))
+    print("="*50)
+    return numero
+
+def derrota():
+    print("=" * 50)
+    print(f"Você perdeu. Sua sequência de vitórias era de {vitoria}")
+    print("=" * 50)
+    print("")
+
+escolhaBot = random.randint(0, 100)
+vitoria = 0
+
+while True:
+    escolhaBot = random.randint(0, 100)
+
+    opcao = parOuImpar()
+    while opcao not in range(0, 3):
+        print("Opcao inválida.")
+        opcao = parOuImpar()
+
+    if opcao == 0:
+        print("Saí pq o usuário digitou zero!")
+        break
+
+
+    escolhaJogador = int(input("Digite um número: "))
+    resultado = escolhaBot + escolhaJogador
+
+
+    if opcao == 1:
+        if(escolhaJogador + escolhaBot) % 2 == 0:
+            print("Você escolheu par")
+            print(f"O resultado é {escolhaJogador} + {escolhaBot} = {resultado} e é par.")
+            print("Você venceu o/")
+            vitoria += 1
+        else:
+            derrota()
+    elif opcao == 2:
+        if(escolhaJogador + escolhaBot % 2 != 0):
+            print("Você escolheu impar")
+            print(f"O resultado é {escolhaJogador} + {escolhaBot} = {resultado} e é impar.")
+            print("Você venceu o/")
+            vitoria += 1
+        else:
+            derrota()
+
