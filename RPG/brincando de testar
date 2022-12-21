@@ -1,0 +1,49 @@
+""" Testezinho """
+
+
+classesMmo = {'Controller': 'Enchanter', 'Controller': 'Catcher', 'Fighter': 'Juggernaut', 'Fighter': 'Diver',
+             'Mage': 'Burst', 'Mage': 'Battlemage', 'Mage': 'Artillery', 'Marksman': 'Techno', 'Marksman': 'Chemical',
+             'Slayer': 'Assassin', 'Slayer': 'Skirmisher', 'Tank': 'Vanguard', 'Tank': 'Warden'}
+racasMmo = ('Yordle', 'Vastaya', 'Humano', 'Ascended', 'Darkin', 'Void', 'Celestial')
+sexo = ['F', 'M']
+
+
+raca = int(input("""Escolha sua raça:
+[1] - Yordle
+[2] - Vastaya
+[3] - Humano
+[4] - Ascended
+[5] - Darkin
+[6] - Void
+[7] - Celestial
+"""))
+sexo = int(input("""
+Escolha seu sexo
+[1] - Feminino
+[2] - Masculino
+ """))
+classez = int(input("""Escolha sua classe:
+=======================|======================|======================|======================|======================| ======================|
+| Classe Controladores |   Classe Lutadores   |    Classe Magos      |   Classe Atiradores  |   Classe Executores  |     Classe Tank       |
+|                      |                      |                      |                      |                      |                       |
+|Subclasses            |Subclasses            |Subclasses            |Subclasses            |Subclasses            |Subclasses             |
+|======================|======================|======================|======================|======================|=======================|
+|[1] - Enchanter       |[3] - Juggernaut      |[5] - Burst           |[8] - Techno          |[10] - Assassin       |[12] - Vanguard        |
+|[2] - Catcher         |[4] - Diver           |[6] - Battlemage      |[9] - Chemical        |[11] - Skirmisher     |[13] - Warden          |
+|                      |                      |[7] - Artillery       |                      |                      |                       |
+|======================|======================|======================|======================|======================|=======================|
+                    """))
+nome = str(input("Digite seu nick: "))
+
+if raca == 1:
+    print(f"""
+    Você é um Yordle, um ser feito de magia por assim dizer, você tem uma aparência fofa,
+    mas pode viver muito, é extremamente poderoso e uma máquina de matar.""")
+
+if raca == 2:
+    print(f"""
+    Então você acordou {nome}, você é um {classez} e sua raça é {raca}, 
+    se esqueceu, mas é um ser primordial, uma das primeiras raças existentes de runeterra, 
+    você tem uma aparência humanoide no entanto tem aspectos animalescos. 
+    Tem uma forte ligação com a magia, os elementos e a natureza
+    Vive milhares de anos e é dotado de muitos poderes.""")
